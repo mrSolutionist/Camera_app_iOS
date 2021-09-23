@@ -126,7 +126,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2b-ZT-lEd">
-                                <rect key="frame" x="74" y="159" width="266" height="34"/>
+                                <rect key="frame" x="74" y="164" width="266" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -137,7 +137,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="ADD PHOTO"/>
                                 <connections>
-                                    <segue destination="drq-Gz-sdh" kind="show" id="bZd-Lt-KwF"/>
+                                    <action selector="addPhoto:" destination="zDn-Ye-Mvo" eventType="touchUpInside" id="58f-HL-xV3"/>
+                                    <segue destination="drq-Gz-sdh" kind="presentation" id="GGz-dU-QF4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yr6-R7-FHT">
@@ -165,37 +166,59 @@
             </objects>
             <point key="canvasLocation" x="424.63768115942031" y="-453.34821428571428"/>
         </scene>
-        <!--CameraVC-->
+        <!--Camera View Controller-->
         <scene sceneID="MOb-qs-y5b">
             <objects>
-                <viewController id="drq-Gz-sdh" customClass="CameraVC" customModule="CameraApp2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="drq-Gz-sdh" customClass="CameraViewController" customModule="CameraApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V3T-rd-jLw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQc-pS-RIW">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="401"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWk-EG-ffr">
-                                <rect key="frame" x="50" y="690" width="306" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSu-Yd-UOD">
+                                <rect key="frame" x="50" y="623" width="306" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="CLICK">
+                                <buttonConfiguration key="configuration" style="filled" title="USE PHOTO">
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="usePhoto:" destination="drq-Gz-sdh" eventType="touchUpInside" id="iou-du-sX8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWk-EG-ffr">
+                                <rect key="frame" x="50" y="696" width="306" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="TAKE PHOTO">
                                     <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="camBtn:" destination="drq-Gz-sdh" eventType="touchUpInside" id="UGM-La-rpy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vkA-9r-iHF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LQc-pS-RIW" firstAttribute="leading" secondItem="vkA-9r-iHF" secondAttribute="leading" id="38W-N2-ELz"/>
-                            <constraint firstItem="vkA-9r-iHF" firstAttribute="bottom" secondItem="LQc-pS-RIW" secondAttribute="bottom" id="hWu-7S-tMo"/>
-                            <constraint firstItem="LQc-pS-RIW" firstAttribute="top" secondItem="vkA-9r-iHF" secondAttribute="top" id="vkf-Zk-pHg"/>
-                            <constraint firstAttribute="trailing" secondItem="LQc-pS-RIW" secondAttribute="trailing" id="ykD-t2-lBz"/>
+                            <constraint firstItem="vkA-9r-iHF" firstAttribute="bottom" secondItem="zWk-EG-ffr" secondAttribute="bottom" constant="81" id="09X-31-2qr"/>
+                            <constraint firstItem="LQc-pS-RIW" firstAttribute="leading" secondItem="vkA-9r-iHF" secondAttribute="leading" id="2TB-Dy-fEs"/>
+                            <constraint firstItem="LQc-pS-RIW" firstAttribute="top" secondItem="vkA-9r-iHF" secondAttribute="top" id="65c-IU-dRh"/>
+                            <constraint firstItem="HSu-Yd-UOD" firstAttribute="leading" secondItem="vkA-9r-iHF" secondAttribute="leading" constant="50" id="MUq-pe-qj8"/>
+                            <constraint firstItem="HSu-Yd-UOD" firstAttribute="top" secondItem="LQc-pS-RIW" secondAttribute="bottom" constant="222" id="Men-F6-Qy5"/>
+                            <constraint firstItem="zWk-EG-ffr" firstAttribute="leading" secondItem="vkA-9r-iHF" secondAttribute="leading" constant="50" id="NEK-82-aT8"/>
+                            <constraint firstItem="zWk-EG-ffr" firstAttribute="top" secondItem="HSu-Yd-UOD" secondAttribute="bottom" constant="42" id="NKF-7U-1S3"/>
+                            <constraint firstItem="LQc-pS-RIW" firstAttribute="trailing" secondItem="vkA-9r-iHF" secondAttribute="trailing" id="Tj6-6C-kff"/>
+                            <constraint firstItem="vkA-9r-iHF" firstAttribute="trailing" secondItem="zWk-EG-ffr" secondAttribute="trailing" constant="58" id="fKk-Zb-aCW"/>
+                            <constraint firstItem="vkA-9r-iHF" firstAttribute="trailing" secondItem="HSu-Yd-UOD" secondAttribute="trailing" constant="58" id="mcp-qW-fFu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vvi-Cf-cG0"/>
+                    <connections>
+                        <outlet property="camFrame" destination="LQc-pS-RIW" id="tZi-mC-bFa"/>
+                        <outlet property="capture" destination="LQc-pS-RIW" id="7xu-fh-BUf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RS5-dm-8mP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,6 +246,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

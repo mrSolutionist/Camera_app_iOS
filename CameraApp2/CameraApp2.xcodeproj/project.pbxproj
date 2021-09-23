@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC11FD3026FCB03D00834B27 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC11FD2F26FCB03D00834B27 /* CameraVC.swift */; };
 		BC13F4E126FB55EB0040A007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13F4E026FB55EB0040A007 /* AppDelegate.swift */; };
 		BC13F4E326FB55EB0040A007 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13F4E226FB55EB0040A007 /* SceneDelegate.swift */; };
 		BC13F4E526FB55EB0040A007 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13F4E426FB55EB0040A007 /* ViewController.swift */; };
@@ -21,10 +20,10 @@
 		BC13F50326FB938B0040A007 /* DataBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13F50226FB938B0040A007 /* DataBaseVC.swift */; };
 		BC13F50926FB978A0040A007 /* StudentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13F50826FB978A0040A007 /* StudentDataModel.swift */; };
 		BC24CDDD26FC4DBA00C2A44E /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC24CDDC26FC4DBA00C2A44E /* StudentTableViewCell.swift */; };
+		BC45E26026FCB925009022BA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45E25F26FCB925009022BA /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC11FD2F26FCB03D00834B27 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		BC13F4DD26FB55EB0040A007 /* CameraApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC13F4E026FB55EB0040A007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC13F4E226FB55EB0040A007 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		BC13F50226FB938B0040A007 /* DataBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseVC.swift; sourceTree = "<group>"; };
 		BC13F50826FB978A0040A007 /* StudentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDataModel.swift; sourceTree = "<group>"; };
 		BC24CDDC26FC4DBA00C2A44E /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
+		BC45E25F26FCB925009022BA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +107,8 @@
 			children = (
 				BC13F4E426FB55EB0040A007 /* ViewController.swift */,
 				BC13F50226FB938B0040A007 /* DataBaseVC.swift */,
+				BC45E25F26FCB925009022BA /* CameraViewController.swift */,
 				BC13F4FE26FB91EB0040A007 /* SignUpVC.swift */,
-				BC11FD2F26FCB03D00834B27 /* CameraVC.swift */,
 				BC13F50026FB91FA0040A007 /* LoginVC.swift */,
 			);
 			path = Controllers;
@@ -194,12 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC45E26026FCB925009022BA /* CameraViewController.swift in Sources */,
 				BC13F4E526FB55EB0040A007 /* ViewController.swift in Sources */,
 				BC24CDDD26FC4DBA00C2A44E /* StudentTableViewCell.swift in Sources */,
 				BC13F50326FB938B0040A007 /* DataBaseVC.swift in Sources */,
 				BC13F4E126FB55EB0040A007 /* AppDelegate.swift in Sources */,
 				BC13F50126FB91FA0040A007 /* LoginVC.swift in Sources */,
-				BC11FD3026FCB03D00834B27 /* CameraVC.swift in Sources */,
 				BC13F50926FB978A0040A007 /* StudentDataModel.swift in Sources */,
 				BC13F4E326FB55EB0040A007 /* SceneDelegate.swift in Sources */,
 				BC13F4FA26FB572F0040A007 /* CoreDataManager.swift in Sources */,

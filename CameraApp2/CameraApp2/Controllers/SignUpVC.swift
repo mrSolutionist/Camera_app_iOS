@@ -39,6 +39,9 @@ class SignUpVC: UIViewController {
     }
     
     
+    @IBAction func addPhoto(_ sender: Any) {
+        
+    }
     
     //validation and saving by passing arguments from signUP view controller after button press
     func validateStudent(name:String,user:String,p1:String,p2:String) {
