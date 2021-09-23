@@ -47,6 +47,7 @@ class CoreData{
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
+            print(context)
             do {
                 try context.save()
             } catch {

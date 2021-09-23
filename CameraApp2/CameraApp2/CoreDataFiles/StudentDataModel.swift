@@ -26,6 +26,7 @@ func StudentModel(name:String, pass:String, userNme:String ){
 func fetchData()  {
     do {
         studentsData = try CoreData.shared.persistentContainer.viewContext.fetch(StudentEntity.fetchRequest())
+      
     }
     catch{}
     

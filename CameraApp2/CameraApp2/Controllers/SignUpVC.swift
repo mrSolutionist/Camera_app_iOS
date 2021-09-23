@@ -25,6 +25,7 @@ class SignUpVC: UIViewController {
     //buttons
     @IBAction func signUpBtn(_ sender: Any) {
         let usrName = userName.text!
+       
         let confirmPassword = confirmPassword.text!
         let password = passWord.text!
         let studentName = name.text!
