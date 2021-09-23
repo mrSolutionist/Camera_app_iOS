@@ -137,9 +137,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="ADD PHOTO"/>
                                 <connections>
-                                    <segue destination="drq-Gz-sdh" kind="popoverPresentation" popoverAnchorView="Bnn-kl-tpe" id="fxt-yu-IZa">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="drq-Gz-sdh" kind="show" id="bZd-Lt-KwF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yr6-R7-FHT">
@@ -172,11 +170,11 @@
             <objects>
                 <viewController id="drq-Gz-sdh" customClass="CameraVC" customModule="CameraApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V3T-rd-jLw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQc-pS-RIW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWk-EG-ffr">
@@ -197,6 +195,7 @@
                             <constraint firstAttribute="trailing" secondItem="LQc-pS-RIW" secondAttribute="trailing" id="ykD-t2-lBz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vvi-Cf-cG0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RS5-dm-8mP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
