@@ -7,11 +7,11 @@
 
 import UIKit
 
-class DataBaseVC: UIViewController {
+class DataBaseVC: UIViewController { //TODO: why you given viewcontroller name "DataBaseVC" actually it's only showing students list right. So just change into StudentListVC
     
     
     
-    @IBOutlet weak var StudentTable: UITableView!
+    @IBOutlet weak var StudentTable: UITableView! //TODO: use camelCase for variable name.
     
     var students : [StudentEntity] = []
     
@@ -41,7 +41,7 @@ extension DataBaseVC: UITableViewDataSource{
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Fetch a cell of the appropriate type.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StudentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StudentTableViewCell //TODO: change cell identifier name ito "StudentCellID"
         cell.textLabel?.text! = "hi"
         // Configure the cell’s contents.
         

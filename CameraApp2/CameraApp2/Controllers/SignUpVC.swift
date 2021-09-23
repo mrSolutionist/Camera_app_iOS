@@ -9,11 +9,17 @@ import UIKit
 
 class SignUpVC: UIViewController {
     
+    /* //TODO: Please change IBOutlet variable names into more specific to it's type
+    what is password? is it a string? lable? or Textfield? so add it's type at the end.
+    ex: comfirmPassword -> comfirmPasswordTxtField, password -> passwordTxtField, like nameTxtField, userNameTxtField.
+    */
     //inputs
     @IBOutlet weak var confirmPassword: UITextField!
     @IBOutlet weak var passWord: UITextField!
     @IBOutlet weak var userName: UITextField!
-    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var name: UITextField! 
+
+
     
     //main
     override func viewDidLoad() {
