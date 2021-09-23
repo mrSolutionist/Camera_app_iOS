@@ -18,7 +18,11 @@ class DataBaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(students.count)
-        
+        fetchData()
+        DispatchQueue.main.async {
+            //table reloads in main for performance ?
+            self.StudentTable.reloadData()
+        }
         
     }
     
