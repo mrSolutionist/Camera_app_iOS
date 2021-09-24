@@ -53,7 +53,7 @@ class CoreData{
 
 
 
-
+var studentsData : [StudentEntity]?
 // A model is created for accessing table
 func studentModel(name:String, pass:String, userNme:String ){
     let context = CoreData.shared.persistentContainer.viewContext
@@ -75,8 +75,16 @@ func studentModel(name:String, pass:String, userNme:String ){
     
     
 }
-
-
 //function for calling fetch method from database with core data (not working)
+
+func fetchData()  {
+    do {
+        studentsData = try CoreData.shared.persistentContainer.viewContext.fetch(StudentEntity.fetchRequest())
+        print("hi",studentsData?.count ?? 0)
+    }
+    catch{}
+
+}
+
 
 
