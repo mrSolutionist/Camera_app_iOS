@@ -9,10 +9,7 @@ import UIKit
 
 class SignUpVC: UIViewController {
     
-    /* //TODO: Please change IBOutlet variable names into more specific to it's type
-    what is password? is it a string? lable? or Textfield? so add it's type at the end.
-    ex: comfirmPassword -> comfirmPasswordTxtField, password -> passwordTxtField, like nameTxtField, userNameTxtField.
-    */
+    
     //inputs
     @IBOutlet weak var confirmPasswordField: UITextField!
     @IBOutlet weak var passWordField: UITextField!
@@ -24,6 +21,8 @@ class SignUpVC: UIViewController {
     //main
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
     
     

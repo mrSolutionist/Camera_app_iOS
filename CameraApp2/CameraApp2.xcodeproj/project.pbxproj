@@ -18,9 +18,10 @@
 		BC13F4FF26FB91EB0040A007 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13F4FE26FB91EB0040A007 /* SignUpVC.swift */; };
 		BC13F50126FB91FA0040A007 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13F50026FB91FA0040A007 /* LoginVC.swift */; };
 		BC13F50326FB938B0040A007 /* StudentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13F50226FB938B0040A007 /* StudentListVC.swift */; };
-		BC13F50926FB978A0040A007 /* StudentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC13F50826FB978A0040A007 /* StudentDataModel.swift */; };
 		BC24CDDD26FC4DBA00C2A44E /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC24CDDC26FC4DBA00C2A44E /* StudentTableViewCell.swift */; };
 		BC45E26026FCB925009022BA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC45E25F26FCB925009022BA /* CameraViewController.swift */; };
+		BCA2194426FDC5840036E6EC /* StudentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA2194226FDC5840036E6EC /* StudentEntity+CoreDataClass.swift */; };
+		BCA2194526FDC5840036E6EC /* StudentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA2194326FDC5840036E6EC /* StudentEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +38,10 @@
 		BC13F4FE26FB91EB0040A007 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		BC13F50026FB91FA0040A007 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BC13F50226FB938B0040A007 /* StudentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListVC.swift; sourceTree = "<group>"; };
-		BC13F50826FB978A0040A007 /* StudentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDataModel.swift; sourceTree = "<group>"; };
 		BC24CDDC26FC4DBA00C2A44E /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 		BC45E25F26FCB925009022BA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		BCA2194226FDC5840036E6EC /* StudentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BCA2194326FDC5840036E6EC /* StudentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +97,10 @@
 		BC13F4FB26FB578F0040A007 /* CoreDataFiles */ = {
 			isa = PBXGroup;
 			children = (
+				BCA2194226FDC5840036E6EC /* StudentEntity+CoreDataClass.swift */,
+				BCA2194326FDC5840036E6EC /* StudentEntity+CoreDataProperties.swift */,
 				BC24CDDC26FC4DBA00C2A44E /* StudentTableViewCell.swift */,
 				BC13F4F926FB572F0040A007 /* CoreDataManager.swift */,
-				BC13F50826FB978A0040A007 /* StudentDataModel.swift */,
 			);
 			path = CoreDataFiles;
 			sourceTree = "<group>";
@@ -198,10 +201,11 @@
 				BC13F4E526FB55EB0040A007 /* ViewController.swift in Sources */,
 				BC24CDDD26FC4DBA00C2A44E /* StudentTableViewCell.swift in Sources */,
 				BC13F50326FB938B0040A007 /* StudentListVC.swift in Sources */,
+				BCA2194426FDC5840036E6EC /* StudentEntity+CoreDataClass.swift in Sources */,
 				BC13F4E126FB55EB0040A007 /* AppDelegate.swift in Sources */,
 				BC13F50126FB91FA0040A007 /* LoginVC.swift in Sources */,
-				BC13F50926FB978A0040A007 /* StudentDataModel.swift in Sources */,
 				BC13F4E326FB55EB0040A007 /* SceneDelegate.swift in Sources */,
+				BCA2194526FDC5840036E6EC /* StudentEntity+CoreDataProperties.swift in Sources */,
 				BC13F4FA26FB572F0040A007 /* CoreDataManager.swift in Sources */,
 				BC13F4FF26FB91EB0040A007 /* SignUpVC.swift in Sources */,
 				BC13F4EB26FB55EC0040A007 /* CameraApp2.xcdatamodeld in Sources */,

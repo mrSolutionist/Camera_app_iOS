@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 
-class CoreData{ //TODO: It's CoreData manager class right? so change it's name into CoreDataManager. Class name should convey it's purpose.
+class CoreData{ 
     
     static  let shared = CoreData()
     
@@ -47,3 +47,25 @@ class CoreData{ //TODO: It's CoreData manager class right? so change it's name i
         }
     }
 }
+
+// studentData
+
+
+
+
+
+// A model is created for accessing table
+func studentModel(name:String, pass:String, userNme:String ){
+    
+    let student = StudentEntity(context: CoreData.shared.persistentContainer.viewContext)
+    student.name = name
+    student.username = userNme
+    student.password = pass
+    try! CoreData.shared.persistentContainer.viewContext.save()
+    
+}
+
+
+//function for calling fetch method from database with core data (not working)
+
+

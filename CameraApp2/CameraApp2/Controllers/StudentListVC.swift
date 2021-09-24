@@ -20,7 +20,7 @@ class StudentListVC: UIViewController { //TODO: why you given viewcontroller nam
         super.viewDidLoad()
         title = "Student Table"
         print(students.count)
-        fetchData()
+        
         DispatchQueue.main.async {
             //table reloads in main for performance ?
             self.studentTable.reloadData()
