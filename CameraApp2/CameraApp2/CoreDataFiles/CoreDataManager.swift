@@ -23,7 +23,7 @@ class CoreData{
         let container = NSPersistentContainer(name: "CameraApp2")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-            
+                
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
@@ -56,12 +56,23 @@ class CoreData{
 
 // A model is created for accessing table
 func studentModel(name:String, pass:String, userNme:String ){
+    let context = CoreData.shared.persistentContainer.viewContext
+    //    let student = StudentEntity(context: CoreData.shared.persistentContainer.viewContext)
+    //    student.name = name
+    //    student.username = userNme
+    //    student.password = pass
+    //    try! CoreData.shared.persistentContainer.viewContext.save()
+    //
     
-    let student = StudentEntity(context: CoreData.shared.persistentContainer.viewContext)
-    student.name = name
-    student.username = userNme
-    student.password = pass
-    try! CoreData.shared.persistentContainer.viewContext.save()
+    
+    let student =  NSEntityDescription.insertNewObject(forEntityName: "StudentEntity", into: context )
+    student.setValue(name, forKey: "name")
+    student.setValue(pass, forKey: "password")
+    student.setValue(userNme, forKey: "username")
+    try! context.save()
+    
+    
+    
     
 }
 
