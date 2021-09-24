@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 
-class CoreData{ //TODO: It's CoreData manager class right? so change it's name into CoreDataManager. Class name should convey it's purpose.
+class CoreData{ 
     
     static  let shared = CoreData()
     
@@ -23,7 +23,7 @@ class CoreData{ //TODO: It's CoreData manager class right? so change it's name i
         let container = NSPersistentContainer(name: "CameraApp2")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-            
+                
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
@@ -47,3 +47,44 @@ class CoreData{ //TODO: It's CoreData manager class right? so change it's name i
         }
     }
 }
+
+// studentData
+
+
+
+
+var studentsData : [StudentEntity]?
+// A model is created for accessing table
+func studentModel(name:String, pass:String, userNme:String ){
+    let context = CoreData.shared.persistentContainer.viewContext
+    //    let student = StudentEntity(context: CoreData.shared.persistentContainer.viewContext)
+    //    student.name = name
+    //    student.username = userNme
+    //    student.password = pass
+    //    try! CoreData.shared.persistentContainer.viewContext.save()
+    //
+    
+    
+    let student =  NSEntityDescription.insertNewObject(forEntityName: "StudentEntity", into: context )
+    student.setValue(name, forKey: "name")
+    student.setValue(pass, forKey: "password")
+    student.setValue(userNme, forKey: "username")
+    try! context.save()
+    
+    
+    
+    
+}
+//function for calling fetch method from database with core data (not working)
+
+func fetchData()  {
+    do {
+        studentsData = try CoreData.shared.persistentContainer.viewContext.fetch(StudentEntity.fetchRequest())
+        print("hi",studentsData?.count ?? 0)
+    }
+    catch{}
+
+}
+
+
+
