@@ -14,13 +14,13 @@ var studentsData : [StudentEntity]?
 
 //TODO: WHY BELOW TWO METHODS ARE WRITTEN HERE?. it's belongs to coredata manager so move this functionality to CoreDataManagerClass
 // A model is created for accessing table
-func StudentModel(name:String, pass:String, userNme:String ){
+func studentModel(name:String, pass:String, userNme:String ){
     
     let student = StudentEntity(context: CoreData.shared.persistentContainer.viewContext)
     student.name = name
     student.username = userNme
     student.password = pass
-    CoreData.shared.saveContext()
+    try! CoreData.shared.persistentContainer.viewContext.save()
 }
 
 

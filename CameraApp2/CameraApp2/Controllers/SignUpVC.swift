@@ -14,10 +14,10 @@ class SignUpVC: UIViewController {
     ex: comfirmPassword -> comfirmPasswordTxtField, password -> passwordTxtField, like nameTxtField, userNameTxtField.
     */
     //inputs
-    @IBOutlet weak var confirmPassword: UITextField!
-    @IBOutlet weak var passWord: UITextField!
-    @IBOutlet weak var userName: UITextField!
-    @IBOutlet weak var name: UITextField! 
+    @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var passWordField: UITextField!
+    @IBOutlet weak var userNameField: UITextField!
+    @IBOutlet weak var nameField: UITextField! 
 
 
     
@@ -30,11 +30,11 @@ class SignUpVC: UIViewController {
     
     //buttons
     @IBAction func signUpBtn(_ sender: Any) {
-        let usrName = userName.text!
+        let usrName = userNameField.text!
        
-        let confirmPassword = confirmPassword.text!
-        let password = passWord.text!
-        let studentName = name.text!
+        let confirmPassword = confirmPasswordField.text!
+        let password = passWordField.text!
+        let studentName = nameField.text!
         validateStudent(name:studentName,user:usrName, p1:password, p2:confirmPassword)
     }
     
@@ -43,9 +43,10 @@ class SignUpVC: UIViewController {
     //validation and saving by passing arguments from signUP view controller after button press
     func validateStudent(name:String,user:String,p1:String,p2:String) {
         if p1 == p2 {
+            
             //calling passing arg to studentModel created in studentData model.
-            StudentModel(name: user, pass: p1, userNme: user)
-        }
+            studentModel(name: user, pass: p1, userNme: user)
+                    }
     }
     
     

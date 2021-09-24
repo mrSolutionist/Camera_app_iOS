@@ -7,21 +7,23 @@
 
 import UIKit
 
-class DataBaseVC: UIViewController { //TODO: why you given viewcontroller name "DataBaseVC" actually it's only showing students list right. So just change into StudentListVC
+class StudentListVC: UIViewController { //TODO: why you given viewcontroller name "DataBaseVC" actually it's only showing students list right. So just change into StudentListVC
     
     
+
     
-    @IBOutlet weak var StudentTable: UITableView! //TODO: use camelCase for variable name.
+    @IBOutlet weak var studentTable: UITableView! //TODO: use camelCase for variable name.
     
-    var students : [StudentEntity] = []
+    var students = [StudentEntity]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Student Table"
         print(students.count)
         fetchData()
         DispatchQueue.main.async {
             //table reloads in main for performance ?
-            self.StudentTable.reloadData()
+            self.studentTable.reloadData()
         }
         
     }
@@ -31,7 +33,7 @@ class DataBaseVC: UIViewController { //TODO: why you given viewcontroller name "
 
 
 
-extension DataBaseVC: UITableViewDataSource{
+extension StudentListVC: UITableViewDataSource{
     // Return the number of rows for the table.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -41,8 +43,8 @@ extension DataBaseVC: UITableViewDataSource{
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Fetch a cell of the appropriate type.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StudentTableViewCell //TODO: change cell identifier name ito "StudentCellID"
-        cell.textLabel?.text! = "hi"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCellID", for: indexPath) as! StudentTableViewCell //TODO: change cell identifier name ito "StudentCellID"
+        cell.textLabel?.text = "hi"
         // Configure the cell’s contents.
         
         return cell
