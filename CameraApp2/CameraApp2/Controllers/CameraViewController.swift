@@ -23,18 +23,6 @@ class CameraViewController: UIViewController {
         picker.delegate = self
         present(picker,animated: true)
     }
-    
-    @IBAction func usePhoto(_ sender: Any) {
-        savePhoto()
-    }
-    
-    func savePhoto()  {
-        guard let image = camFrame.image else {return}
-        UIImageWriteToSavedPhotosAlbum(image,self,#selector(imagePickerController(_:didFinishPickingMediaWithInfo:)),nil)
-    }
-    
-  
-    
 }
 
 
@@ -49,8 +37,13 @@ extension CameraViewController: UIImagePickerControllerDelegate,UINavigationCont
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             return
         }
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         camFrame.image = image
+        
+        
     }
+    
+    
     
     
 }

@@ -137,7 +137,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="ADD PHOTO"/>
                                 <connections>
-                                    <action selector="addPhoto:" destination="zDn-Ye-Mvo" eventType="touchUpInside" id="58f-HL-xV3"/>
                                     <segue destination="drq-Gz-sdh" kind="presentation" id="GGz-dU-QF4"/>
                                 </connections>
                             </button>
@@ -184,9 +183,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="USE PHOTO">
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="usePhoto:" destination="drq-Gz-sdh" eventType="touchUpInside" id="iou-du-sX8"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWk-EG-ffr">
                                 <rect key="frame" x="50" y="696" width="306" height="31"/>
@@ -216,8 +212,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vvi-Cf-cG0"/>
                     <connections>
-                        <outlet property="camFrame" destination="LQc-pS-RIW" id="tZi-mC-bFa"/>
-                        <outlet property="capture" destination="LQc-pS-RIW" id="7xu-fh-BUf"/>
+                        <outlet property="camFrame" destination="LQc-pS-RIW" id="A8q-qd-igv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RS5-dm-8mP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
