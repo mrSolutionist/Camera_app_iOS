@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -159,7 +159,7 @@
 				};
 			};
 			buildConfigurationList = BC13F4D826FB55EB0040A007 /* Build configuration list for PBXProject "CameraApp2" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
