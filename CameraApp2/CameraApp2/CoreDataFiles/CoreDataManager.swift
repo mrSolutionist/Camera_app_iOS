@@ -50,26 +50,26 @@ class CoreData{
 
 // studentData
 
+var studentsData : [StudentEntity] = []
 
+let context = CoreData.shared.persistentContainer.viewContext
 
-
-var studentsData : [StudentEntity]?
 // A model is created for accessing table
 func studentModel(name:String, pass:String, userNme:String ){
-    let context = CoreData.shared.persistentContainer.viewContext
-    //    let student = StudentEntity(context: CoreData.shared.persistentContainer.viewContext)
-    //    student.name = name
-    //    student.username = userNme
-    //    student.password = pass
-    //    try! CoreData.shared.persistentContainer.viewContext.save()
-    //
+    
+    let student = StudentEntity(context: CoreData.shared.persistentContainer.viewContext)
+    student.name = name
+    student.username = userNme
+    student.password = pass
+    try! CoreData.shared.persistentContainer.viewContext.save()
     
     
-    let student =  NSEntityDescription.insertNewObject(forEntityName: "StudentEntity", into: context )
-    student.setValue(name, forKey: "name")
-    student.setValue(pass, forKey: "password")
-    student.setValue(userNme, forKey: "username")
-    try! context.save()
+    
+    //    let student =  NSEntityDescription.insertNewObject(forEntityName: "StudentEntity", into: context )
+    //    student.setValue(name, forKey: "name")
+    //    student.setValue(pass, forKey: "password")
+    //    student.setValue(userNme, forKey: "username")
+    //    try! context.save()
     
     
     
@@ -77,13 +77,15 @@ func studentModel(name:String, pass:String, userNme:String ){
 }
 //function for calling fetch method from database with core data (not working)
 
-func fetchData()  {
+func fetchData() -> [StudentEntity] {
     do {
-        studentsData = try CoreData.shared.persistentContainer.viewContext.fetch(StudentEntity.fetchRequest())
-        print("hi",studentsData?.count ?? 0)
+         studentsData = try context.fetch(StudentEntity.fetchRequest())
+        
     }
     catch{}
-
+    
+    return studentsData
+    
 }
 
 

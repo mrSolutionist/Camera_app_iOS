@@ -35,16 +35,22 @@ class SignUpVC: UIViewController {
         let password = passWordField.text!
         let studentName = nameField.text!
         validateStudent(name:studentName,user:usrName, p1:password, p2:confirmPassword)
+        
     }
     
     
  
     //validation and saving by passing arguments from signUP view controller after button press
     func validateStudent(name:String,user:String,p1:String,p2:String) {
-        if p1 == p2 {
+        if p1 == p2 && p1 != "" {
             
             //calling passing arg to studentModel created in studentData model.
             studentModel(name: user, pass: p1, userNme: user)
+            let alert = UIAlertController(title: "SignUP", message: "Succesfull", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
                     }
     }
     

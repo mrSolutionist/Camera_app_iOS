@@ -9,26 +9,21 @@ import UIKit
 
 class StudentListVC: UIViewController {
     
-    
 
     
     @IBOutlet weak var studentTable: UITableView!
     
-    var studentsData : [StudentEntity]?
+    var studentsData : [StudentEntity] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Student Table"
-        print(studentsData?.count)
-    fetchData()
-        DispatchQueue.main.async {
-            //table reloads in main for performance ?
-            self.studentTable.reloadData()
+        studentsData = fetchData()
         }
         
     }
     
-}
+
 
 
 
@@ -36,16 +31,15 @@ class StudentListVC: UIViewController {
 extension StudentListVC: UITableViewDataSource{
     // Return the number of rows for the table.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(studentsData?.count)
-        return studentsData?.count ?? 0
+        return studentsData.count
     }
     
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Fetch a cell of the appropriate type.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCellID", for: indexPath) as! StudentTableViewCell 
-        cell.textLabel?.text = "hi"
-        // Configure the cell’s contents.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCellID", for: indexPath) as! StudentTableViewCell
+        let student = studentsData[indexPath.row]
+        cell.cellConfig(student:student)
         
         return cell
     }

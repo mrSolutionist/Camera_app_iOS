@@ -37,8 +37,10 @@ extension CameraViewController: UIImagePickerControllerDelegate,UINavigationCont
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             return
         }
+        
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         camFrame.image = image
+        
         
         
     }
