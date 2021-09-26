@@ -34,7 +34,8 @@ class SignUpVC: UIViewController {
         let confirmPassword = confirmPasswordField.text!
         let password = passWordField.text!
         let studentName = nameField.text!
-        validateStudent(name:studentName,user:usrName, p1:password, p2:confirmPassword)
+        let checking = validateStudent(name:studentName,user:usrName, p1:password, p2:confirmPassword)
+     
         
     }
     

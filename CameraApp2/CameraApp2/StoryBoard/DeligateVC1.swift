@@ -9,6 +9,7 @@ import UIKit
 
 class DeligateVC1: UIViewController {
 
+    @IBOutlet weak var textLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +17,15 @@ class DeligateVC1: UIViewController {
     }
     
 
+    @IBAction func clickBtn(_ sender: Any) {
+        
+        let secondVc = storyboard?.instantiateViewController(withIdentifier: "secondVC") as! DeligateVC2
+        
+        secondVc.sendTextDeligate = self
+        present(secondVc, animated: true, completion: nil)
+    }
+    
+   
     /*
     // MARK: - Navigation
 
@@ -26,4 +36,12 @@ class DeligateVC1: UIViewController {
     }
     */
 
+}
+
+extension DeligateVC1 : DataTransferDelegate{
+    func sendText(text: String) {
+        textLabel.text = text
+    }
+    
+    
 }

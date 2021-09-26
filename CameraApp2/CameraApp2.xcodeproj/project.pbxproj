@@ -78,6 +78,7 @@
 		BC13F4DF26FB55EB0040A007 /* CameraApp2 */ = {
 			isa = PBXGroup;
 			children = (
+				BC34619826FF5F270090C4DC /* DeligateVC */,
 				BC13F4F726FB56020040A007 /* Deligates */,
 				BC13F4FC26FB57A00040A007 /* Controllers */,
 				BC13F4FB26FB578F0040A007 /* CoreDataFiles */,
@@ -125,10 +126,18 @@
 			isa = PBXGroup;
 			children = (
 				BC13F4E626FB55EC0040A007 /* Main.storyboard */,
-				BC1EEE5A26FF26A400DD58CB /* DeligateVC2.swift */,
-				BC1EEE5826FF269600DD58CB /* DeligateVC1.swift */,
 				BC13F4EE26FB55EF0040A007 /* LaunchScreen.storyboard */,
 			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		BC34619826FF5F270090C4DC /* DeligateVC */ = {
+			isa = PBXGroup;
+			children = (
+				BC1EEE5A26FF26A400DD58CB /* DeligateVC2.swift */,
+				BC1EEE5826FF269600DD58CB /* DeligateVC1.swift */,
+			);
+			name = DeligateVC;
 			path = StoryBoard;
 			sourceTree = "<group>";
 		};
